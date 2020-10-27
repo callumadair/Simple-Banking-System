@@ -3,6 +3,9 @@ package banking;
 import java.util.Random;
 
 
+/**
+ * The type Account.
+ */
 class Account {
     private String cardNum;
     private int pinNumber;
@@ -10,6 +13,9 @@ class Account {
     private int idNum;
 
 
+    /**
+     * Instantiates a new Account.
+     */
     public Account() {
         setCardNumber();
         setPinNumber();
@@ -24,10 +30,20 @@ class Account {
     }
 
 
+    /**
+     * Sets card num.
+     *
+     * @param cardNum the card num
+     */
     public void setCardNum(String cardNum) {
         this.cardNum = cardNum;
     }
 
+    /**
+     * Gets card num.
+     *
+     * @return the card num
+     */
     public String getCardNum() {
         return this.cardNum;
     }
@@ -60,6 +76,12 @@ class Account {
         }
     }
 
+    /**
+     * Is luhn boolean.
+     *
+     * @param accountNumber the account number
+     * @return the boolean
+     */
     public static boolean isLuhn(String accountNumber) {
         int[] intArray = new int[accountNumber.length()];
         for (int i = 0; i < intArray.length; i++) {
@@ -96,11 +118,21 @@ class Account {
     }
 
 
+    /**
+     * Sets pin number.
+     *
+     * @param pinNumber the pin number
+     */
     public void setPinNumber(int pinNumber) {
         this.pinNumber = pinNumber;
     }
 
 
+    /**
+     * Gets pin number.
+     *
+     * @return the pin number
+     */
     public int getPinNumber() {
         return this.pinNumber;
     }
@@ -112,24 +144,49 @@ class Account {
     }
 
 
+    /**
+     * Sets id num.
+     *
+     * @param idNum the id num
+     */
     public void setIdNum(int idNum) {
         this.idNum = idNum;
     }
 
 
+    /**
+     * Gets id num.
+     *
+     * @return the id num
+     */
     public int getIdNum() {
         return this.idNum;
     }
 
+    /**
+     * Sets balance.
+     *
+     * @param balance the balance
+     */
     public void setBalance(int balance) {
         this.balance = balance;
     }
 
 
+    /**
+     * Gets balance.
+     *
+     * @return the balance
+     */
     public int getBalance() {
         return this.balance;
     }
 
+    /**
+     * Change balance.
+     *
+     * @param valChange the val change
+     */
     public void changeBalance(int valChange) {
         this.balance += valChange;
     }
